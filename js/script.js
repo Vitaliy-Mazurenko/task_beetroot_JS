@@ -88,3 +88,83 @@ function validate_form() {
   }
   return false;
 }
+
+// фильтрация товаров
+let items = document.querySelectorAll('.product-box__item');
+
+function val() {
+  d = document.getElementById('select_id').value;
+  console.log(d);
+  switch (d) {
+    case '1':
+      items.forEach(item => {
+        if (item.classList.contains('breakfast')) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    case '2':
+      items.forEach(item => {
+        if (item.classList.contains('entree')) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    case '3':
+      items.forEach(item => {
+        if (item.classList.contains('garnish')) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    default:
+      items.forEach(item => {
+        item.style.display = 'block'
+      })
+  }
+}
+
+function valPrice() {
+  c = document.getElementById('price-select').value;
+  console.log(c);
+  switch (c) {
+    case '30':
+      items.forEach(item => {
+        if (item.getAttribute('data-id') < 30) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    case '50':
+      items.forEach(item => {
+        if (item.getAttribute('data-id') < 50) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    case '100':
+      items.forEach(item => {
+        if (item.getAttribute('data-id') < 100) {
+          item.style.display = 'block'
+        } else {
+          item.style.display = 'none'
+        }
+      })
+      break
+    default:
+      items.forEach(item => {
+        item.style.display = 'block'
+      })
+  }
+}
+

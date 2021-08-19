@@ -36,7 +36,7 @@
                 <div class="filter-box">
                     <div class="select-box">
                         <label class="filter-label">Категория</label>
-                        <select class="select-control">
+                        <select onchange="val()" id="select_id" class="select-control">
                             <option value="0">Все</option>
                             <option value="1">Завтраки</option>
                             <option value="2">Первые блюда</option>
@@ -45,7 +45,7 @@
                     </div><!-- /.select-box -->
                     <div class="price-select-box">
                         <label class="filter-label">Цена</label>
-                        <select class="select-control">
+                        <select onchange="valPrice()" id="price-select" class="select-control">
                             <option value="0">Все</option>
                             <option value="30">До 30 грн</option>
                             <option value="50">До 50 грн</option>
@@ -59,7 +59,7 @@
 
                 <div class="products-box grid-box">
 
-                    <div class="product-box__item">
+                    <div class="product-box__item breakfast" data-id="25">
                         <h3 class="product-box__title">Овсяная каша с фруктами</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im1.jpg">
@@ -69,11 +69,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="1">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="25">
                         <h3 class="product-box__title">Яичница глазунья с овощами на сковородке</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im2.jpg">
@@ -83,11 +83,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="2">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item breakfast" data-id="30">
                         <h3 class="product-box__title">Сет азербайджанский завтрак</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im3.jpg">
@@ -97,11 +97,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="3">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="45">
                         <h3 class="product-box__title">Яичница с помидорами по-бакински</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im4.jpg">
@@ -111,11 +111,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="4">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item breakfast" data-id="45">
                         <h3 class="product-box__title">Сырники со сметаной</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im5.jpg">
@@ -125,11 +125,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="5">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="50">
                         <h3 class="product-box__title">Шпинатный крем-суп</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im6.jpg">
@@ -139,11 +139,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="6">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="85">
                         <h3 class="product-box__title">Суп Пити</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im7.jpg">
@@ -153,11 +153,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="7">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="95">
                         <h3 class="product-box__title">Борщ украинский</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im8.jpg">
@@ -167,11 +167,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="8">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item entree" data-id="100">
                         <h3 class="product-box__title">Суп Кюфта Бозбаш</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im9.jpg">
@@ -181,11 +181,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="9">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item garnish" data-id="125">
                         <h3 class="product-box__title">Картофель фри</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im10.jpg">
@@ -195,11 +195,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="10">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item garnish" data-id="135">
                         <h3 class="product-box__title">Картофель по-домашнему</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im11.jpg">
@@ -209,11 +209,11 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="11">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
-                    <div class="product-box__item">
+                    <div class="product-box__item breakfast" data-id="150">
                         <h3 class="product-box__title">Рис с овощами</h3>
                         <div class="product-box__img">
                             <img class="img-fluid" src="i/im12.jpg">
@@ -223,7 +223,7 @@
                             <div class="qty">
                                 <input class="qty__item" type="number"> Кол
                             </div>
-                            <button class="product-box__btn" data-id="12">Добавить</button>
+                            <button class="product-box__btn">Добавить</button>
 
                         </div>
                     </div>
