@@ -196,3 +196,72 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-around;
 }
+
+/* ================== modal-box */
+.closeBtn{
+    cursor: pointer;
+    float: right;
+    font-size:20px;
+    color: white;
+  }
+
+  .modal {
+      background: rgba(0,0,0, 0.2);
+      display: none;
+      justify-content: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      right: 0;
+      perspective: 500px;
+
+  }
+
+  .modal .modal-wrapper {
+      width: 50%;
+      max-width: 300px;
+      top: 15%;
+      background: lightgray;;
+      position: absolute;
+      text-align: center;
+      box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.4);
+      animation-name:modalopen;
+      animation-duration:.8s;
+      transform: rotateX(0deg);
+  }
+
+  .modal-body {
+      padding: 15px 15px;
+  }
+
+ .modal-footer {
+      text-align: center;
+      color: white;
+  }
+
+  .modal-body {
+      background: white;
+  }
+
+  .form-row{
+      margin-top: 5px;
+  }
+.closeBtn{
+    background: darkorange;
+    font-size: 14px;
+    margin: 10px 20px;
+}
+
+  @keyframes modalopen{
+    from {
+      opacity: 0;
+      top: 5%;
+      transform: rotateX(15deg);
+     }
+    to {
+      opacity: 1;
+      top: 15%;
+      transform: rotateX(0deg);
+      }
+  }

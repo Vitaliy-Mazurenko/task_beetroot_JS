@@ -12,7 +12,7 @@ function addEvent(elem, type, handler) {
   }
   return false;
 }
-for (var i = 0; i < itemBox.length; i++) {
+for (let i = 0; i < itemBox.length; i++) {
   addEvent(itemBox[i].querySelector('.product-box__btn'), 'click', addToCart);
 }
 
@@ -55,4 +55,36 @@ function addToCart(e) {
     cartPrice.innerHTML = sum;
   }
 
+}
+
+
+let btn = document.querySelector('.btn-check'), // Главная кнопка
+  modal = document.querySelector('.modal'), // Модальное окно
+  closeBtn = document.querySelector('.closeBtn'); // Кнопка, закрывающая модальное окно
+
+// Открытие модального окна
+btn.addEventListener('click', function () {
+  modal.style.display = 'flex';
+})
+
+// Закрытие модального окна при клике на серую область
+window.addEventListener('click', function (e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+})
+
+function validate_form() {
+  let contact_name = document.contact_form.name.value;
+  let contact_email = document.contact_form.email.value;
+  if (contact_name === '' || contact_name === ' ') {
+    alert("Please enter a valid 'name'.");
+  } else if (contact_email === '' || contact_email === ' ') {
+    alert('Please enter email');
+  } else {
+    localStorage.clear();
+    modal.style.display = "none";
+    alert('Благодарим за покупки');
+  }
+  return false;
 }

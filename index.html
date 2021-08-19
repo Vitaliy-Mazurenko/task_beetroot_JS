@@ -245,7 +245,25 @@
             </div>
         </footer>
     </div><!-- /.app-container -->
-
+    <div class="modal">
+        <div class="modal-wrapper">
+            <form name="contact_form" onsubmit="return validate_form ();">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <label for="name">Enter Name: </label><input type="text" id="name" name="name"
+                            placeholder="Name...">
+                    </div>
+                    <div class="form-row">
+                        <label for="time">Enter Email: </label><input type="email" id="email" email="email"
+                            placeholder="Email...">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="closeBtn btn-check">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script>
         document.getElementById('bty').textContent = (new Date()).getFullYear();
     </script>
